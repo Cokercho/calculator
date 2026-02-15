@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212122;
+    color: white;
+    padding: 15px;
+}
+
+/* Make container responsive */
+.container{
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Result screen */
+.res{
+    border: 3px solid black;
+    padding: 20px;
+    width: 100%;          /* FULL width */
+    text-align: end;
+    font-size: 1.8rem;
+    background: #2d2d2d;
+    border-radius: 15px;
+    overflow-x: auto;     /* prevents overflow on long numbers */
+}
+
+/* All button rows */
+.buttons,
+.buttons2,
+.buttons3,
+.buttons4,
+.buttons5{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* All buttons */
+.buttons button,
+.buttons2 button,
+.buttons3 button,
+.buttons4 button,
+.buttons5 button{
+    flex: 1;              /* auto equal width */
+    background-color: gray;
+    color: white;
+    border: 2px solid black;
+    font-size: 1.8rem;
+    padding: 15px 0;
+    border-radius: 20px;
+}
+
+/* Equal button */
+.equal{
+    background-color: green!important;
+}
+
+/* 🔥 Mobile optimization */
+@media (max-width: 480px){
+    .res{
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .buttons button,
+    .buttons2 button,
+    .buttons3 button,
+    .buttons4 button,
+    .buttons5 button{
+        font-size: 1.5rem;
+        padding: 18px 0;
+    }
+}
